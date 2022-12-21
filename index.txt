@@ -1,0 +1,15 @@
+MongoDb stores data records as documents(BSON documents) which are gathered together.A database stores one or more collections of documents
+To select a database to use in mongosh, use command ==> use myDB
+If database doesn't exist,then mongoDb creates database when we store data for that database. command to create database ==> use myNewDB
+ db.myNewCollection.insertOne({x:1})
+
+insertOne() operation creates both the database myNewDB and collection myNewCollection
+
+Collection
+MongoDB stores documents in collection.collections are compared to the tables in relational database
+createIndex() operation also creates the collection
+  db.myNewCollection2.insertOne({x:2})
+  db.myNewCollection3.createIndex({y:2})
+
+To explicitely create a collection ==> db.createCollection()
+To retrieve the UUID for a collection, use the command listCollections or db.CollectionInfos()
